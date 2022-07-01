@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{220FF710-0C35-4FBD-93FE-865E61E00C98}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProcessSchedulerProyect</RootNamespace>
+    <AssemblyName>ProcessSchedulerProyect</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateNewProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewProcess.Designer.cs">
+      <DependentUpon>CreateNewProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="Date.cs" />
+    <Compile Include="Example.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Example.Designer.cs">
+      <DependentUpon>Example.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Example2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Example2.Designer.cs">
+      <DependentUpon>Example2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="ProcessClass.cs" />
+    <Compile Include="Running.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queue.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateNewProcess.resx">
+      <DependentUpon>CreateNewProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Example.resx">
+      <DependentUpon>Example.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Example2.resx">
+      <DependentUpon>Example2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Venado01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon cerrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.tif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoV2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1V3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sulross Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sulross Logo 02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sul Ross Logo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sulrross logo 05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sulrross logo 05v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel 01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panelin01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proccess Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodcutos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proccess_icon_Cde_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel_Bottom_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel_Bottom_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_Bottom_Picture_Shader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_Bottom_Picture_Regular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_TopPanel_Background_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_Background_Top_Panel_Bright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_Top_Picture_Shader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_Top_Picture_Bright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_Top_Picture_Shader02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon_Top_Picture_Bright1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spidy_Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spidy_Background02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaptainAmerica01Shaded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpidyBlueShaded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo1.ico" />
+    <None Include="Resources\BackGroundWithCircles.png" />
+    <None Include="Resources\Circle5.png" />
+    <None Include="Resources\Circle4.png" />
+    <None Include="Resources\Circle3.png" />
+    <None Include="Resources\circle2.png" />
+    <None Include="Resources\Circle1.png" />
+    <None Include="Resources\CircuitWallPaperShader.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
